@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Order a phone</title>
+        <link id="stylesheet" rel="stylesheet" href="/main.css">
+        <script defer src="/js/main.js"></script>
+        <script defer src="/js/contact.js"></script>
+    </head>
+    <body>
+        <div class="nav_links">
+            <ul>
+                <li><a href="http://localhost:4131/main">Home Page</a></li>
+                <li><a href="http://localhost:4131/contact">Contact us</a></li>
+                <li><a href="http://localhost:4131/testimonies">Testimonials</a></li>
+                <li><a href="http://localhost:4131/admin/contactlog">Contacts List</a></li>
+                <li><button id="toggle">Toggle</button></li>
+            </ul>
+        </div>
+
+        <!-- <span id="sale"></span> -->
+        <h1>Order a phone</h1>
+
+        <form action="/contact" method="post">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required >
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required >
+            </p>
+            <!-- <p>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" required>
+            </p> -->
+            <p>When do you want your phone to arrive<br>
+                <label for="delivery_date">Purchased on:</label>
+                <input type="date" name="delivery_date" id ="delivery_date" 
+                       min="2023-11-15" max="2024-12-24" required>
+            </p>
+            <p>What phone do you want to purchase?<br>
+                <label for="phone_model" ></label>
+                <select name="phone_model" id="phone_model" required>
+                    <option value="" >Select an Option</option> <!--Saw this on W3 schools-->
+                    <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
+                    <option value="iPhone 15">iPhone 15</option>
+                    <option value="S23 Ultra">S23 Ultra</option>
+                    <option value="S23+">S23+</option>
+                    <option value="OnePlus 12 5G">OnePlus 12 5G</option>
+                    <option value="Pixel 8">Pixel 8</option>
+                </select>
+            </p>
+            <p> Do you want a phone case included with your order? <br>
+                <input type="checkbox" name="case" id="case">
+                <label for="case">I want a case</label>
+                <br>            
+             </p>
+
+             <p id="pay"></p>
+             
+             <p>
+                <input type="submit" value="Place Order" name="order" id="order">
+             </p>
+
+        </form>
+        
+    </body> 
+</html>
