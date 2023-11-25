@@ -7,5 +7,11 @@ There are some APIs to handle GET, POST, and DELETE requests, all implemented in
 
 The server is written in Python. It handles the requests, and responds with the requested files. It handles the URL parsing, and the POST request body, and ensures the data received is mostly accurate.
 
-Not implemented in this version:
+
+## Future Implementations
+
+- Configure the server using Express.js.
+
+## Not implemented in this version:
+
 - Starting a sale doesn't give any discounts on the items.
